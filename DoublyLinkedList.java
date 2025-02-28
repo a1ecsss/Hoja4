@@ -9,7 +9,9 @@ class DoublyLinkedList<T> implements IList<T> {
     @Override
     public void push(T data) {
         Node newNode = new Node(data);
-        if (head != null) head.prev = newNode;
+        if (head != null) {
+            head.prev = newNode;
+        }
         newNode.next = head;
         head = newNode;
     }
